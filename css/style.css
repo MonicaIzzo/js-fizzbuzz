@@ -1,0 +1,60 @@
+/********************************************
+    GENERAL STYLES
+********************************************/
+
+
+/* Reset CSS */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+} 
+
+/* Custom PROPERTIES */
+:root {
+}
+
+/* Generics */
+body {    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/********************************************
+    UTILITIES
+********************************************/
+
+.debug {
+    border: 2px dotted red;
+}
+.min-h {
+    min-height: 100px;
+}
+
+main {
+    background-color: blue;
+}
+
+/* Text */
+
+/* Border */
+
+/* UI */
+
+/* Header */
+
+/* Main */
+
+/* Footer */
+
+
+
+/********************************************
+    LAYOUT
+********************************************/
+
+
+/* HEADER */
