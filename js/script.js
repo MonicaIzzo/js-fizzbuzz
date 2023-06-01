@@ -18,6 +18,11 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto 
 ---------------------------------------*/
 
 // # 0 Recupero l'ememento dal DOM
+const listElements = document.getElementById('numbers-list');
+
+/*---------------------------------------
+        PROGRAMMA
+---------------------------------------*/
 
 // # 1 Creo il ciclo "for"
 for (let i = 1; i <= 100; i++) {
@@ -34,5 +39,7 @@ for (let i = 1; i <= 100; i++) {
     name = 'Buzz';
 }
 
- console.log (name);  
+ console.log (name);
+ // stampo in pagina
+ listElements.innerHTML += `<li>${name}</li>`;
 }
