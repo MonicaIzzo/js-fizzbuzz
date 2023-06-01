@@ -13,19 +13,16 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto 
 - **1**
   - Prepararo tutte le variabili che servono per eseguire il programma.
 - **2**
-  - 
+  - creo il ciclo "FOR" "tirarmi giu" tutti i numeri.
   
 - **3**
-  - Chiedo all'utente tramite il form la sua èta.
+  - Setto l'eccezioni per:
+  "Fizz" "Buzz" e "FizzBuzz"
 
 - **4**
-  - Verificare che i dati inseriti dall'utente sono corretti per l'esecuzione del programma
-  **SE NO**
-  Uscire dal flusso del programma ed invitare l'utente a ri-inserire i dati corretti.
-  **SE SI**
-  Procedere al punto successivo 
-- **7**
-  - Stampare il risultato in pagina 
+  - Inserisco gli elementi in pagina.
+- **5**
+  - Creo il CSS per dare un layout ai square. 
 **FINE**  
 
 

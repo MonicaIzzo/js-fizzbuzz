@@ -27,19 +27,22 @@ const listElements = document.getElementById('numbers-list');
 // # 1 Creo il ciclo "for"
 for (let i = 1; i <= 100; i++) {
 
-    let name = i;
+    let square = i;
 
   if (i % 3 === 0 && i % 5 === 0) {
-    name = 'FizzBuzz';   
+    square = 'FizzBuzz';   
    
 } else if (i % 3 === 0) { 
-    name = 'Fizz';  
+    square = 'Fizz';  
 
 } else if (i % 5 === 0) { 
-    name = 'Buzz';
+    square = 'Buzz';
 }
 
- console.log (name);
+ console.log (square);
  // stampo in pagina
- listElements.innerHTML += `<li>${name}</li>`;
+
+ const myClass = `${square}`.toLowerCase();
+
+ listElements.innerHTML += `<li class=${myClass}>${square}</li>`;
 }
