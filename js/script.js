@@ -1,18 +1,14 @@
 console.log('JS OK')
 
 /* 
+Scrivi un programma che stampi in console i numeri da 1 a 100, ma che
+per i multipli di 3 stampi “Fizz” al posto del numero
+per i multipli di 5 stampi “Buzz” al posto del numero.
+Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto del numero.
+
+
 - 0 Recupero l'elemento da DOM
-- 1 Inizializzo tutte le variabili
-- 2 Aggancio un event listener al button di conferma
-- 3 Verifico che i dati inseriti dall'utente
-    - SE NON CORRETTI: alert con messaggio ed esco dal programma
-    - SE CORRETTI: procedo al punto successivo
-- 4 Calcolo il prezzo del biglietto al lordo degli sconti.
-    - SE l'età dell'utente è minore di 18 anni applico lo sconto young.
-    - SE l'età dell'utente è maggiore di 65 anni applico lo sconto over.
-    - SE l'utente non ha diritto a nessun effettuo nessun sconto e procedo al punto successivo.
-- 5 Randomizzo Carrozza e code CP 
-- 6 Inserisco il risultato in pagina.
+- 1 Creo un ciclo "for" per avere tutti i numeri da 0 a 100.
 */ 
 
 
@@ -21,89 +17,22 @@ console.log('JS OK')
         OPERAZIONI PRELIMINARI
 ---------------------------------------*/
 
-// # 0, 1 Recupero gli emementi dal DOM e inizializzo tutte le variabili
+// # 0 Recupero l'ememento dal DOM
 
-// FORM ELEMENTS
-const NameSurnameInput = document.getElementById ('NameSurname');
-const KmInput = document.getElementById ('Km');
-const AgeInput = document.getElementById ('Age');
-const ConfirmBtn = document.getElementById ('confirm');
-const ResetBtn = document.getElementById ('reset');
+// # 1 Creo il ciclo "for"
+for (let i = 1; i <= 100; i++) {
 
+    let name = i;
 
-// TICKET ELEMENTS
-const ticketCardeElements = document.getElementById ('ticketCard');
-const PassengerElements = document.getElementById ('passenger');
-const ticketElements = document.getElementById ('ticket');
-const cabElements = document.getElementById ('cab');
-const codeCPElements = document.getElementById ('codeCP');
-const priceElements = document.getElementById ('price');
+  if (i % 3 === 0 && i % 5 === 0) {
+    name = 'FizzBuzz';   
+   
+} else if (i % 3 === 0) { 
+    name = 'Fizz';  
 
-
-const princePerKm = 0.21;
-const minDiscount = 0.8;
-const overDiscount = 0.6;
-
-console.log('princePerKm', 'minDiscount', 'overDiscount')
-
-// # 2 Aggancio un event listener al button
-ConfirmBtn.addEventListener('click', function() {
-    const NameSurnameValue = NameSurnameInput.value.trim();
-    const KmValue = parseInt(KmInput.value);
-    const AgeValue = AgeInput.value;
-
-    console.log('NameSurnameValue', 'KmValue', 'AgeValue')
-
-// # 3 Validazione
-if (!NameSurnameValue || isNuN(KmValue) || KmValue < 1) {
-    alert('I dati inseriti non sono validi');
-    return;
+} else if (i % 5 === 0) { 
+    name = 'Buzz';
 }
 
-// # 4 Calcolo il prezzo del biglietto
-let price = KmValue * 0.21;
-let discount = 'Tariffa standard';
-
-// # 4a 4b Calcolo gli eventuali sconti
-if (AgeValue === 'min') {
-    price *= 0.8;
-    discount = 'Tariffa ridotta';
-
+ console.log (name);  
 }
-else if (AgeValue === 'over') {
-    price *= 0.6;
-    discount = 'Tariffa ridotta';
-}    
-
-// Carrozza
-const cab = Math.floor(Math.random() * 12 + 1);
-
-// codePC
-const codePC = Math.floor(Math.random * (00000 - 99999) + 99999);
-
-
-// # 6 Inserisco il risultato in pagina.
-
-PassengerElements.innerText = NameSurnameValue;
-ticketElements.innerText = ticketValue;
-cabElements.innerText = cab;
-codeCPElements.innerText = codePC;
-priceElements.innerText = '€' + priceValue.toFixed(2);
-
-
-ticketElements.classList.remove('d-none')
-
-})
-
-ConfirmBtn.addEventListener('click', function() {
-});
-
-ResetBtn.addEventListener('click', function() {
-    NameSurnameInput.Value = '';
-    KmInput.Value = '';
-    AgeInput.Value = '';
-    ticketElements.classList.add('d-none');
-});
-
-
-
